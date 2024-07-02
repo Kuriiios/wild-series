@@ -22,4 +22,11 @@ class ProgramController extends AbstractController
 
     }
 
+    #[Route('program/{id<\d+>}', methods : ['GET'], name: 'program_')]
+    public function show() : Response
+    {
+        return $this->render('program/show.html.twig');
+
+    }
+
 }
